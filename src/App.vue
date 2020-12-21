@@ -1,17 +1,17 @@
 <template>
   <v-app>
-    <v-app-bar app color="transparent" hide-on-scroll dark class="pl-10">
+    <v-app-bar app absolute color="transparent" dark class="pl-md-10">
       <h3 class="font-weight-medium name">SILVER KOLDE</h3>
 
       <v-spacer/>
 
-      <v-btn href="#About" class="mr-2 ml-7" text>
+      <v-btn href="#About" class="mr-2 ml-md-7" text>
         <span class="mr-2" >About</span>
       </v-btn>
-      <v-btn href="#About" class="mr-2 ml-7" text>
+      <v-btn href="#About" class="mr-2 ml-md-7" text>
         <span>My Work</span>
       </v-btn>
-      <v-btn href="#About" class="mr-2 ml-7" text>
+      <v-btn href="#About" class="mr-2 ml-md-7" text>
         <span>Contact</span>
       </v-btn>
     </v-app-bar>

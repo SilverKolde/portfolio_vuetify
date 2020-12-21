@@ -3,18 +3,48 @@
     <h2>My Projects</h2>
     <div>
       <v-layout row wrap>
-        <v-flex v-for="(project, index) in projects" :key="index" xs12 sm6 md4>
-          <div class="project_card" @mouseleave="testout" @mouseover="testin">
+        <v-flex v-for="(project, index) in projects" :key="index" xs12 md6 lg4>
+
+          <v-card class="mx-auto my-12 project_card" max-width="374">
+            <template slot="progress">
+              <v-progress-linear color="deep-purple" height="10" indeterminate/>
+            </template>
+
             <div class="videoWrapper">
               <iframe :src="project.url" width="420" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-            <div class="textWrapper">
-              <h3>{{project.title}}</h3>
-            </div>
-            <a class="linkWrapper" :href="project.githubLink" target="_blank">
-              <h6>Description & Source code <i class="fab fa-github"></i></h6>
-            </a>
-          </div>
+
+            <v-card-title>{{project.title}}</v-card-title>
+            <v-btn v-if="project.liveURL !== undefined" color="primary lighten-2 ml-4" small >
+              <a :href="project.liveURL" target="_blank">check out live</a>
+            </v-btn>
+            <v-card-text>
+              <div class="my-4 subtitle-1">
+                {{ project.soloGroup }}
+              </div>
+              <div>{{ project.description }}</div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+
+            <v-card-title>Used technologies</v-card-title>
+
+            <v-card-text>
+              <v-layout row wrap>
+                <v-flex v-for="(tech, idx) in project.technologies" :key="idx" class="ma-3">
+                  <v-chip>
+                    {{ tech }}
+                  </v-chip>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="info lighten-2 mb-4 ml-2" small>
+                <a :href="project.githubLink" target="_blank">Source code</a>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-flex>
       </v-layout>
     </div>
@@ -28,10 +58,6 @@ export default {
     projects: function () {
       return this.$store.getters.getProjects
     },
-  },
-  methods: {
-    testin: () => console.log("in"),
-    testout: () => console.log("out")
   }
 }
 </script>
@@ -39,19 +65,6 @@ export default {
 <style scoped>
   .projects {
     background-color: rgba(0,0,0,0.06);
-  }
-
-  .project_card {
-    background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px 0 #a5a5a5;
-    margin: 40px;
-    padding-bottom: 7px;
-    transition: transform .2s; /* Animation */
-  }
-
-  .project_card:hover {
-    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 
   .videoWrapper {
@@ -69,21 +82,18 @@ export default {
     margin: 5px;
   }
 
-  .textWrapper {
-    min-height: 60px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  a {
+    text-decoration: none;
   }
 
-  .linkWrapper {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+  .project_card {
+    transition: transform .4s;
+  }
+
+  .project_card:hover {
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03);
   }
 
 </style>
