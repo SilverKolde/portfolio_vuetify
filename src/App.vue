@@ -1,60 +1,44 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app-bar app color="transparent" hide-on-scroll dark class="pl-10">
+      <h3 class="font-weight-medium name">SILVER KOLDE</h3>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+      <v-spacer/>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn href="#About" class="mr-2 ml-7" text>
+        <span class="mr-2" >About</span>
+      </v-btn>
+      <v-btn href="#About" class="mr-2 ml-7" text>
+        <span>My Work</span>
+      </v-btn>
+      <v-btn href="#About" class="mr-2 ml-7" text>
+        <span>Contact</span>
       </v-btn>
     </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+    <About></About>
+    <Projects></Projects>
+    <Contact></Contact>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Contact from "@/components/Contact";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+    Contact,
+    About,
+    Projects,
+  }
 };
 </script>
+
+<style scoped>
+  .name {
+    font-size: 20px;
+  }
+</style>
