@@ -1,5 +1,5 @@
 <template>
-  <div class="projects pa-15">
+  <div class="projects pa-15" id="projects">
     <h2>My Projects</h2>
     <div>
       <v-layout row wrap>
@@ -11,7 +11,7 @@
             </template>
 
             <div class="videoWrapper">
-              <iframe :src="project.url" width="420" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              <iframe :src="project.videoURL" width="420" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
 
             <v-card-title>{{project.title}}</v-card-title>

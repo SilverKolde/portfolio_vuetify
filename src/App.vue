@@ -5,13 +5,13 @@
 
       <v-spacer/>
 
-      <v-btn href="#About" class="mr-2 ml-md-7" text>
+      <v-btn href="#about" class="mr-2 ml-md-7" text>
         <span class="mr-2" >About</span>
       </v-btn>
-      <v-btn href="#About" class="mr-2 ml-md-7" text>
+      <v-btn href="#projects" class="mr-2 ml-md-7" text>
         <span>My Work</span>
       </v-btn>
-      <v-btn href="#About" class="mr-2 ml-md-7" text>
+      <v-btn href="#contact" class="mr-2 ml-md-7" text>
         <span>Contact</span>
       </v-btn>
     </v-app-bar>

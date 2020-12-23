@@ -1,7 +1,7 @@
 export default class Project{
-  constructor(title, url, githubLink, soloGroup, description, technologies, liveURL) {
+  constructor(title, videoURL, githubLink, soloGroup, description, technologies, liveURL) {
     this.title = title;
-    this.url = url;
+    this.videoURL = videoURL;
     this.githubLink = githubLink;
     this.soloGroup = soloGroup;
     this.description = description;

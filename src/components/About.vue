@@ -1,11 +1,17 @@
 <template>
-  <div >
+  <div>
     <div class="bg"></div>
-    <div class="ma-15">
-      <h2>Who am I</h2>
+    <div class="ma-15" id="about">
+      <h2>About me</h2>
       <p>
-        <br>Mainly I am focusing on my studies in Computer science. In the remaining time, I love to work out, discover new technologies. Lately, I've been keeping an eye out for job opportunities in the IT industry.<br><br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi consequuntur, dolore excepturi labore mollitia nisi numquam odio, possimus provident quidem reprehenderit unde vel. Adipisci aliquid animi aperiam at consequuntur cumque eaque fugiat illum laborum, modi mollitia numquam odit officia optio, quidem, quod quos ratione repudiandae temporibus unde ut vel voluptatem. Cupiditate distinctio excepturi ipsum molestiae nam nemo, nulla numquam sequi vel velit! Eligendi mollitia nisi suscipit! Eos facilis obcaecati recusandae rem. Dignissimos eaque ipsam maiores quae, quibusdam quod. At commodi delectus dicta doloremque inventore modi molestiae natus quaerat recusandae. Blanditiis, deleniti est illum in nisi odit possimus quisquam repellendus!
+        <br>
+        I started looking into the IT industry sometime around spring 2019. Initially, I played around with Python and dabbled a bit with HTML and CSS.
+        This sparked my curiosity, but I realized that I would be better off if I had some structure in my learnings. So I enrolled in Tartu University, Computer Science curriculum.
+        <br><br>
+        I have been always spurred on by the question "Why?". I find myself often pondering about questions like "why is it done this way? is the reason we are doing this still valid?"
+        During the whole period of studying I have felt that the more I learn, the more I get to understand the bigger picture, the more interesting software development becomes.
+        Right now I have reached a point where I feel that it's about time to put all things learned into practice on real-world applications.
+
       </p>
     </div>
 
