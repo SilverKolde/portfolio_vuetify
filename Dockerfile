@@ -8,7 +8,7 @@ COPY ./ ./
 RUN npm install
 
 # build project to dist folder
-RUN npm build
+RUN npm run build
 
 # install server to serve the dist folder
 RUN npm install -g http-server
@@ -17,4 +17,4 @@ RUN npm install -g http-server
 EXPOSE 8080
 
 # start command to boot up a container
-CMD ["http-server", "dist"]
+CMD [ "http-server", "dist" ]
